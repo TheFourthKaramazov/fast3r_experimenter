@@ -198,12 +198,12 @@ def main():
         help="which head to fuse (global falls back to in_other_view)"
     )
     ap.add_argument(
-        "--conf_threshold", type=float, default=1.5,
-        help="per-point confidence cutoff (default 1.5)"
+        "--conf_threshold", type=float, default=0,
+        help="per-point confidence cutoff (default 0)"
     )
     ap.add_argument(
-        "--per_view_percentile", type=float, default=10,
-        help="drop bottom P%% of views by mean confidence (default 10)"
+        "--per_view_percentile", type=float, default=0,
+        help="drop bottom P%% of views by mean confidence (default 0)"
     )
     args = ap.parse_args()
 
